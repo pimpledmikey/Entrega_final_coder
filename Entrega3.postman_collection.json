@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "965b1b07-ab0b-4630-b9d1-94b49f0c02c4",
+		"name": "Entrega3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24932687"
+	},
+	"item": [
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "agregar carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/carts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar prducto al carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/carts/66726b337569d142be3f09ab/product/66725de4f069d4db48b96ed2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								"66726b337569d142be3f09ab",
+								"product",
+								"66725de4f069d4db48b96ed2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar producto del carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/carts/66726b337569d142be3f09ab/product/66725de4f069d4db48b96ed2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								"66726b337569d142be3f09ab",
+								"product",
+								"66725de4f069d4db48b96ed2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "boorar todos los prductos del carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/carts/66726b337569d142be3f09ab/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								"66726b337569d142be3f09ab",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar prudcto del carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 61\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/carts/66726b337569d142be3f09ab/product/66725df3f069d4db48b96ed6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								"66726b337569d142be3f09ab",
+								"product",
+								"66725df3f069d4db48b96ed6"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar carritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/carts/66726b337569d142be3f09ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"carts",
+								"66726b337569d142be3f09ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "consultar prodcutos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Nintendo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"title\": \"The Witcher 3\",\n        \"description\": \"Wild Hunt Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC001\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Red Dead Redemption 2\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC002\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Cyberpunk 2077\",\n        \"description\": \"Night City Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC003\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Halo Infinite\",\n        \"description\": \"Legendary Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC004\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Gears 5\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC005\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Forza Horizon 5\",\n        \"description\": \"Racing Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC006\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"FIFA 23\",\n        \"description\": \"Champion Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC007\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"NBA 2K23\",\n        \"description\": \"MVP Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC008\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Madden NFL 23\",\n        \"description\": \"Hall of Fame Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC009\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Call of Duty: Modern Warfare II\",\n        \"description\": \"Warzone Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC010\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Battlefield 2042\",\n        \"description\": \"Gold Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC011\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Apex Legends\",\n        \"description\": \"Champion Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC012\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Fortnite\",\n        \"description\": \"Battle Royale Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC013\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Minecraft\",\n        \"description\": \"Block Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC014\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Rocket League\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC015\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Sea of Thieves\",\n        \"description\": \"Pirate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC016\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Destiny 2\",\n        \"description\": \"Legendary Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC017\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Overwatch 2\",\n        \"description\": \"Hero Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC018\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Rainbow Six Siege\",\n        \"description\": \"Elite Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC019\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Star Wars Jedi: Fallen Order\",\n        \"description\": \"Deluxe Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC020\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Assassin's Creed Valhalla\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC021\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Ghost of Tsushima\",\n        \"description\": \"Director's Cut\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC022\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Doom Eternal\",\n        \"description\": \"Hell Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC023\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Resident Evil Village\",\n        \"description\": \"Gold Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC024\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Elden Ring\",\n        \"description\": \"Collector's Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC025\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Far Cry 6\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC026\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Hades\",\n        \"description\": \"Godlike Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC027\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Control\",\n        \"description\": \"Ultimate Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC028\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Borderlands 3\",\n        \"description\": \"Vault Hunter Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC029\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    },\n    {\n        \"title\": \"Final Fantasy XV\",\n        \"description\": \"Royal Edition\",\n        \"price\": 2000,\n        \"thumbnail\": [\"https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"],\n        \"code\": \"ABC030\",\n        \"stock\": 5,\n        \"category\": \"xbox\"\n    }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar prodcuto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"prodcuto cambiado2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/products/9c1a9015-72df-45d2-9bd0-f8625e427448",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"products",
+								"9c1a9015-72df-45d2-9bd0-f8625e427448"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarpor id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/products/9c1a9015-72df-45d2-9bd0-f8625e427448",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"products",
+								"9c1a9015-72df-45d2-9bd0-f8625e427448"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar por idprodcuto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"prodcuto cambiado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/products/9c1a9015-72df-45d2-9bd0-f8625e427448",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"products",
+								"9c1a9015-72df-45d2-9bd0-f8625e427448"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
